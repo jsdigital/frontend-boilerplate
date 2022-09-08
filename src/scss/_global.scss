@@ -1,0 +1,32 @@
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
+
+html, body {
+  font-family: 'Noto Serif JP', serif;
+ 
+}
+  
+
+/* General */
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;   
+}
+
+body {
+    margin: 0;
+    padding: 0;
+ 
+}
+ 
+  
+  
+  
