@@ -1,7 +1,7 @@
 {
   "name": "frontend-boilerplate",
   "version": "1.0.0",
-  "description": "Simple front-end boilerplate using Gulp 4, Bootstrap 5.2, Panini",
+  "description": "Simple front-end boilerplate using Gulp 4, Bootstrap 5.2 and Panini",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
