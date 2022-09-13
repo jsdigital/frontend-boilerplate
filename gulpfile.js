@@ -52,7 +52,7 @@ function jsBootstrapTask() {
 	return src(
 		[
 			"dist/all.js", //combine with dist/all.js
-			files.jsBootstrapTask 
+			files.jsBootstrapPath 
 		],
 		{ sourcemaps: true }
 	)

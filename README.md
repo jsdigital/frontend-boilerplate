@@ -5,7 +5,7 @@ A starter frontend boilerplate; modified from [thecodercoder's workflow]https://
 Gulp, Sass, Panini + BrowserSync
 
 # Commands
-* Run `npm install`
+* Run `yarn install`
 * Run `gulp bs` 
  
 # Issues / Todos
