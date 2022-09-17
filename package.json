@@ -5,14 +5,14 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "#"
+    "url": "https://github.com/JamesStabb/frontend-boilerplate"
   },
   "author": "@JamesStabb",
   "license": "ISC",
   "bugs": {
-    "url": "#"
+    "url": "https://github.com/JamesStabb/frontend-boilerplate"
   },
-  "homepage": "#",
+  "homepage": "https://github.com/JamesStabb/frontend-boilerplate",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "autoprefixer": "^10.4.8",

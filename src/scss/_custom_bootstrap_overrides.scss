@@ -1,0 +1,86 @@
+
+$primary:    #82B82C;
+$secondary:  #011517;
+$success:   #8bce20;
+$info:      #2c46b8;
+$warning:   #da3131;
+$danger:   #d3602a;
+$light:     #ffffff;
+$dark:     #202020;
+$font-size-base:              1.2rem;
+
+$body-bg: #FBFFF5;
+$body-color: #111;
+$brand-green:#82B82C; // custom
+$brand-dark:#011517; // custom
+$footer-background-color:#DDEFC1; // custom
+
+$grid-columns:      12;
+$grid-gutter-width: 20px;
+ 
+$grid-row-columns:  6;
+
+ 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1392px,
+  xl: 1600px,
+  xxl: 1800px
+);  
+
+$container-max-widths: (
+  sm: 540px,
+  md: 992px,
+  lg: 1092px,
+  xl: 1292px,
+  xxl: 1392px
+);
+
+
+/* 
+* General 
+*/
+$link-color: #82B82C;
+$btn-border-radius:0;
+$border-radius:0px;
+
+/*  
+* Navbar
+*/
+$offcanvas-horizontal-width:250px;
+$nav-link-font-size : 1.6rem;
+
+$navbar-padding-y: 0;
+$navbar-brand-padding-y: 0;
+$navbar-light-color: #000000 ;
+$navbar-light-hover-color: #82B82C;
+$navbar-light-active-color: #82B82C;
+$navbar-nav-link-padding-x:20px;
+$navbar-brand-margin-end:0px;
+
+$navbar-light-toggler-border-color:#011517;
+
+$dropdown-border-radius:0;
+$dropdown-bg: #011517;
+$dropdown-link-hover-bg:#011517;
+$dropdown-link-hover-color:#82B82C;
+$dropdown-link-color:#ffffff;
+$dropdown-link-color-hover:#82B82C;
+$dropdown-link-color-active:#82B82C;
+
+/* 
+* Accordion 
+*/
+
+$accordion-button-padding-x:0px;
+$accordion-button-padding-y:20px;
+$accordion-body-padding-x: 0px;
+$accordion-color:#000000;
+$accordion-border-color:$primary;
+$accordion-border-width:3px;
+$accordion-button-color:$primary;
+$accordion-btn-icon-width:20px;
+$accordion-button-focus-box-shadow:0px;
+$accordion-button-active-bg:$body-bg;

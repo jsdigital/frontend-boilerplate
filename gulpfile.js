@@ -1,5 +1,5 @@
 // Initialize modules
- const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
 
 // Importing the Gulp packages 
 const sass = require('gulp-sass')(require('sass'));
