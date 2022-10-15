@@ -32,48 +32,22 @@ function scssTask() {
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(dest('dist', { sourcemaps: '.' })); 
 }
- 
 
-// JS task (1 of 3) - Concat and minify main JS
-function jsTask() {
+//JS task (0 of 3) - Intended to replace all of 1,2 and 3 below
+function jsAllTask() {
 	return src(
 		[
-			files.jsPath
+			files.jsPath,
+			files.jsBootstrapPath,
+			files.jsVendorPath 			 			
 		],
 		{ sourcemaps: true }
 	)
 	.pipe(concat('all.js'))
-	.pipe(terser())
+	.pipe(terser()) //js compressor
 	.pipe(dest('dist', { sourcemaps: '.' }));
 }
-
-// JS task (2 of 3) - Concat Bootstrap full bundle from node_modules/
-function jsBootstrapTask() {
-	return src(
-		[
-			"dist/all.js", //combine with dist/all.js
-			files.jsBootstrapPath 
-		],
-		{ sourcemaps: true }
-	)
-	.pipe(concat('all.js'))
-	.pipe(dest('dist', { sourcemaps: '.' }));
-}
-
-// JS task (3 of 3) - Concat JS from src/scripts/vendor/
-function jsVendorTask() {
-	return src(
-		[
-			"dist/all.js", //combine with dist/all.js
-			files.jsVendorPath 
-		],
-		{ sourcemaps: true }
-	)
-	.pipe(concat('all.js'))
-	.pipe(dest('dist', { sourcemaps: '.' }));
-}
- 
-
+	 
 // HTML Task (Panini)
 function htmlTask() {
 	return  src('src/pages/**/*.{html,hbs,handlebars}')
@@ -119,9 +93,9 @@ function browserSyncReload(cb) {
 // Watch task 
 function watchTask() {  
 	watch(
-		[ files.scssPath, files.jsPath ],
+		[ files.scssPath, files.jsPath, files.jsBootstrapPath, files.jsVendorPath   ],
 		{ interval: 1000, usePolling: true }, //Makes docker work
-		series( parallel(scssTask, jsTask), jsBootstrapTask, jsVendorTask, browserSyncReload)
+		series( parallel(scssTask, jsAllTask), browserSyncReload)
 	);
 	watch(
 		[ files.htmlPath],
@@ -133,9 +107,7 @@ function watchTask() {
 
 // Export the Gulp tasks (command >> gulp bs)
 exports.bs = series(
-	parallel(scssTask, jsTask),
-	jsBootstrapTask,
-	jsVendorTask,
+	parallel(scssTask, jsAllTask),
 	resetPages,	
 	htmlTask,		
 	cacheBustTask,
@@ -144,9 +116,7 @@ exports.bs = series(
 );
 //for production build (command >> gulp production)
 exports.production = series(
-	parallel(scssTask, jsTask),
-	jsBootstrapTask,
-	jsVendorTask,
+	parallel(scssTask, jsAllTask),
 	htmlTask		
  
 );
